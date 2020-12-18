@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+body p {
+  margin: 0;
+}
+
+.neon-border1 {
+  -webkit-box-shadow: 0 0 1px #9e3abd, 0 0 2px #9e3abd, 0 0 6px #9e3abd, 0 0 12px #9e3abd, inset 0 0 1px #9e3abd, inset 0 0 2px #9e3abd, inset 0 0 6px #9e3abd, inset 0 0 12px #9e3abd;
+          box-shadow: 0 0 1px #9e3abd, 0 0 2px #9e3abd, 0 0 6px #9e3abd, 0 0 12px #9e3abd, inset 0 0 1px #9e3abd, inset 0 0 2px #9e3abd, inset 0 0 6px #9e3abd, inset 0 0 12px #9e3abd;
+}
+
+.neon-border2 {
+  -webkit-box-shadow: 0 0 1px #3a82bd, 0 0 2px #3a82bd, 0 0 6px #3a82bd, 0 0 12px #3a82bd, inset 0 0 1px #3a82bd, inset 0 0 2px #3a82bd, inset 0 0 6px #3a82bd, inset 0 0 12px #3a82bd;
+          box-shadow: 0 0 1px #3a82bd, 0 0 2px #3a82bd, 0 0 6px #3a82bd, 0 0 12px #3a82bd, inset 0 0 1px #3a82bd, inset 0 0 2px #3a82bd, inset 0 0 6px #3a82bd, inset 0 0 12px #3a82bd;
+}
+
+header.header .nav {
+  border: 1px solid #872ca2;
+  height: 60px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width: 100%;
+}
+
+main {
+  margin-top: 20px;
+}
+
+main .title {
+  color: #272727;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+main .toolbar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #24232442;
+}
+
+main .toollist {
+  list-style: none;
+  padding: 0 5px;
+  margin: 0;
+}
+
+main .toollist .tool {
+  padding: 1px 0;
+}
+
+main .toollist .tool:not(:last-child) {
+  border-bottom: 1px solid #2423241c;
+}
+
+main .toollist .btn-tool {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+main .toollist .btn-tool:hover {
+  border: 1px solid #24232433;
+}
+
+main .toollist .btn-tool .tool-name {
+  color: #0f0f0f;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+main .canvas-container {
+  border: 1px solid #3a4ebd;
+  border-radius: 10px;
+  height: 550px;
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

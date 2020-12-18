@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+$border-color1: #9e3abd;
+$border-color2: #3a82bd;
+@mixin neon-border($color) {
+   box-shadow: 0 0 1px $color,
+   0 0 2px $color,
+   0 0 6px $color,
+   0 0 12px $color,
+   inset 0 0 1px $color,
+   inset 0 0 2px $color,
+   inset 0 0 6px $color,
+   inset 0 0 12px $color;
+}
+
+body {
+   p {
+      margin: 0;
+   }
+}
+
+.neon-border1 {
+   @include neon-border($border-color1);
+}
+.neon-border2 {
+   @include neon-border($border-color2);
+}
+header.header {
+   .nav {
+      border: 1px solid #872ca2;
+      height: 60px;
+      text-align: center;
+      font-family: 'Oswald',
+      sans-serif;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      width: 100%;
+   }
+}
+
+main {
+   margin-top: 20px;
+   .title {
+      color: rgb(39, 39, 39);
+      font-weight: bold;
+      text-align: center;
+      font-size: 20px;
+      flex-grow: 1;
+   }
+   .toolbar-header {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #24232442;
+   }
+   .toollist {
+      list-style: none;
+      padding: 0 5px;
+      margin: 0;
+      .tool {
+         padding: 1px 0;
+         &:not(:last-child) {
+            border-bottom: 1px solid #2423241c;
+         }
+         
+      }
+      .btn-tool {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 100%;
+         transition: 0.2s;
+         &:hover {
+            border: 1px solid #24232433;
+         }
+         .tool-name {
+            color: rgb(15, 15, 15);
+            font-weight: 600;
+            font-size: 20px;
+            margin-left: 8px;
+         }
+      }
+   }
+
+   .canvas-container {
+      border: 1px solid #3a4ebd;
+      border-radius: 10px;
+      height: 550px;
+      width: 100%;
+   }
+}
