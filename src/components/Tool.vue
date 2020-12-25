@@ -1,6 +1,6 @@
 <template>
-   <li class="tool">
-      <button class="btn btn-tool" type="button" @click="$emit('toolClicked', tool.title)">
+   <li class="tool" :class="'tool' + tool.id">
+      <button class="btn btn-tool" type="button" @click="$emit('toolClicked', tool)">
          <i class="tool-icon" :class="tool.icon"></i>
          <p class="tool-name">{{ tool.title }}</p>
       </button>

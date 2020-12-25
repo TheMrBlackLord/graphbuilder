@@ -4,6 +4,7 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 // custom js files
 //import {Point} './assets/js/Point'
+
 import './assets/js/CanvasHandler'
 
 createApp(App).mount('#app')
