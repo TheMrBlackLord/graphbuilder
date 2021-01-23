@@ -1,6 +1,6 @@
 <template>
-   <li class="tool" :class="'tool' + tool.id">
-      <button class="btn btn-tool" type="button" @click="$emit('toolClicked', tool)">
+   <li class="tool" :class="{active: tool.id == activeToolId}">
+      <button class="btn btn-tool" type="button">
          <i class="tool-icon" :class="tool.icon"></i>
          <p class="tool-name">{{ tool.title }}</p>
       </button>
@@ -9,7 +9,8 @@
 <script>
 export default {
    props: {
-      tool: Object
+      tool: Object,
+      activeToolId: Number
    }
 }
 </script>

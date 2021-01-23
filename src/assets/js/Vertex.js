@@ -2,10 +2,11 @@ import {Point} from './Point';
 import {opts} from './opts';
 // vertex model
 class Vertex {
-   constructor(x, y, ctx, label) {
+   constructor(x, y, ctx, label, id) {
       this.pos = new Point(x, y);
       this.ctx = ctx;
       this.label = label;
+      this.id = id || 0;
       this.fillColor = opts.vertexFillColor;
       this.radius = opts.vertexRadius
    }

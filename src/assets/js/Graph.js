@@ -2,22 +2,27 @@
 // Graph model
 class Graph {
    constructor() {
-      this.vertexes = {};
-      this.vertexList = [];
+      this.vertices = {};
+      this.verticesList = [];
       this.nextVertexNum = 1;
+      this.nextVertexId = 1;
       /* 
-      this.vertexes = {
-         vertex1: {
-            vertexes: [vertex2, vertex3, vertex4],
-            edgeDirected: [true, false, true],
-            weight: null or number 
+      this.vertices = {
+         vertex1.id: {
+            connected: [vertex2, vertex3, vertex4, ...],
+            edgeDirected: [true, false, true, ...],
          }, ...
       }         
       */
    }
    addVertex(vertex) {
-      this.vertexList.push(vertex);
+      this.vertices[vertex.id] = {
+         connected: [],
+         edgeDirected: []
+      };
+      this.verticesList.push(vertex);
       this.nextVertexNum++;
+      this.nextVertexId++;
    }
 }
 export {Graph};
