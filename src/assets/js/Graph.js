@@ -24,5 +24,8 @@ class Graph {
       this.nextVertexNum++;
       this.nextVertexId++;
    }
+   connect(vx1, vx2, isDirected, weight) {
+      console.log(vx1, vx2, isDirected, weight);
+   }
 }
 export {Graph};

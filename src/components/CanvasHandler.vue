@@ -38,6 +38,7 @@ export default {
             offsetX: 0,
             offsetY: 0
          },
+         connected: []
       }
    },
    methods: {
@@ -67,8 +68,8 @@ export default {
          }
          // hover effect
          if (this.tool == 'select') {
-            for(let i = this.graph.vertexList.length - 1; i >= 0; i--) {
-               let vx = this.graph.vertexList[i];
+            for(let i = this.graph.verticesList.length - 1; i >= 0; i--) {
+               let vx = this.graph.verticesList[i];
                let dist = Math.hypot(vx.pos.x - e.offsetX, vx.pos.y - e.offsetY);
                if (dist <= vx.radius) {
                   vx.fillColor = opts.vertexHoverColor;
@@ -87,24 +88,25 @@ export default {
          }
          // connect 2 vertices
          else if (this.tool == 'connect') {
-            for(let i = this.graph.vertexList.length - 1; i >= 0; i--) {
-               let vx = this.graph.vertexList[i];
+            for(let i = this.graph.verticesList.length - 1; i >= 0; i--) {
+               let vx = this.graph.verticesList[i];
                // distance between cursor position and vertex center
                let dist = Math.hypot(vx.pos.x - e.offsetX, vx.pos.y - e.offsetY);
                if (dist <= vx.radius) { // cursor is inside the circle
-                  let len = this.graph.connected.length;
-                  if (this.graph.connected[len-1].length < 2) {
-                     this.graph.connected[len-1].push(vx);
-                  } else {
-                     this.graph.connected.push([vx]);
+                  if (this.connected.length < 2) {
+                     this.connected.push(vx);
+                     console.log(this.connected)
+                  } 
+                  if (this.connected.length == 2) {
+                     console.log('connected')
                   }
                }
             }
          }
          // select  & move vertices
           else if (this.tool == 'select') {
-         for(let i = this.graph.vertexList.length - 1; i >= 0; i--) {
-            let vx = this.graph.vertexList[i];
+         for(let i = this.graph.verticesList.length - 1; i >= 0; i--) {
+            let vx = this.graph.verticesList[i];
             // distance between cursor position and vertex center
             let dist = Math.hypot(vx.pos.x - e.offsetX, vx.pos.y - e.offsetY);
             if (dist <= vx.radius) { // cursor is inside the circle
